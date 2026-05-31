@@ -89,7 +89,7 @@
     <div class="clock">
       <div class="big" id="clockTime">--:--:--</div>
       <div id="clockDate">—</div>
-      <div class="doc">Line 451 · Lamb &amp; Associates Packaging (SupplyOne)</div>
+      <div class="doc">Lamb &amp; Associates Packaging (SupplyOne)</div>
     </div>
   </header>
 
@@ -229,7 +229,7 @@ function buildSummary(){
   const ready=done===total;
   const L=[];
   L.push('2ND SHIFT — POST-SHIFT ACTIVITIES');
-  L.push('Line 451 · Lamb & Associates Packaging (SupplyOne)');
+  L.push('Lamb & Associates Packaging (SupplyOne)');
   L.push('Generated: '+stamp());
   L.push('==================================================');
   L.push('Shift Date: '+val('shiftDate')+'   Shift: '+val('shift'));
@@ -262,7 +262,7 @@ function emailResults(){
   const ready=[...boxes].every(b=>b.checked);
   const date=val('shiftDate')||'(no date)';
   const mc=val('machNo')||'(no machine)';
-  const subject=`2nd Shift Post-Shift — Line 451 — Machine ${mc} — ${date} — ${ready?'READY':'NOT COMPLETE'}`;
+  const subject=`2nd Shift Post-Shift — Machine ${mc} — ${date} — ${ready?'READY':'NOT COMPLETE'}`;
   let body=buildSummary();
   const max=1800;let trunc='';
   if(body.length>max){body=body.slice(0,max);trunc='%0A%0A[Truncated — use Save/Print to PDF for the full record.]';}
